@@ -14,8 +14,7 @@ class PolyTreeNode
             @parent = nil
         else
             if @parent != nil
-                prev_parent = @parent
-                prev_parent.children.reject { |child_node| child_node == self }
+                @parent.children.reject! { |child_node| child_node == self }
             end
             node.children.push(self) if !node.children.include?(self)
             @parent = node
@@ -30,7 +29,7 @@ class PolyTreeNode
         #      @parent = node
         #     node.children.push(self)
         # end
-
+           
     end
 
 end
