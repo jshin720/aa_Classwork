@@ -37,9 +37,20 @@ class PolyTreeNode
     def remove_child(child_node)
         child_node.parent=(nil)
     end
-    
+
+    require 'byebug'
     def dfs(target_value)
+        # if child's parent is not checked 
+        return self if self.value == target_value
+        # return nil if self.empty?
+    # debugger    
+        self.children.each do |child_node| 
+            result = child_node.dfs(target_value)
+            return result if result != nil
+        end
+        nil
     end
+
     def bfs(target_value)
         queue=[self]
         #return self if target_value== self.value
