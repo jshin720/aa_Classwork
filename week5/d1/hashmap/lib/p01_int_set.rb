@@ -124,4 +124,5 @@ class ResizingIntSet
     end
     @store = new_store
   end
+
 end

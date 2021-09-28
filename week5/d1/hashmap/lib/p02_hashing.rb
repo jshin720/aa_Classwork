@@ -4,6 +4,10 @@ end
 
 class Array
   def hash
+    our_hash = self[0].hash
+    self.each do |ele|
+      ele.hash 
+    end
   end
 end
 
