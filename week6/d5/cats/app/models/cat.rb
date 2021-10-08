@@ -1,5 +1,5 @@
 require 'action_view'
-class Cats < ApplicationRecord
+class Cat < ApplicationRecord
   include ActionView::Helpers::DateHelper
   validates :birth_date, :name, :color, :sex, presence: true
   validates :sex, inclusion: %w(M F)

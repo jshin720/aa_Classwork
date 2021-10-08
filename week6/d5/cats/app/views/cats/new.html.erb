@@ -1,0 +1,9 @@
+<form action="<% cats_url %>" method="POST"> 
+  <label> Cats Name
+    <input type="text" name="cats[name]" value="<%= @cats.name %>" />
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="cats[sex]" value="M"/>
+  </label>
+</form>
