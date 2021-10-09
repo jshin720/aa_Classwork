@@ -3,6 +3,7 @@
     <input type="text" name="cats[name]" value="<%= @cats.name %>" />
   </label>
   <br>
+
   <label>
     <input type="radio" name="cats[sex]" value="M"/>
   </label>
@@ -10,6 +11,7 @@
     <input type="radio" name="cats[sex]" value="F"/>
   </label>
   <br>
+
   <label for="cat_color"> Color </label>
     <select name="cats[color]">
       <option disabled selected> --select a Color-- </option>
@@ -19,12 +21,15 @@
       <option value="black">black</option>
     </select>
   <br>
+
   <label for="birth_date">birth date</label>
   <input id="birth_date" type="date" name="cats[birth_date]"/>
   <br>
+
   <label for="description">Description</label>
     <textarea name="cats[description]"></textarea>
-    <br>
+  <br>
+  
   <label for="cat_age">Age</label>
   <input id="age" type="text" name="cats[age]"/>
 
