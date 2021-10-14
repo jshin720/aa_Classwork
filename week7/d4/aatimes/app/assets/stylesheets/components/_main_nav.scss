@@ -1,5 +1,7 @@
 .main-nav {
-
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
 .left-nav > ul,
@@ -10,6 +12,10 @@
 .left-nav {
 
   > ul {
+    display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
     > li {
 
     }
