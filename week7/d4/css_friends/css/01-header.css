@@ -1,0 +1,32 @@
+/* PHASE 1: Header */
+
+body {
+  font-weight: 500;
+  font-family: "festive";
+  font-size: 20px;
+}
+
+.header {
+  background: green;
+  color: black;
+  border-bottom: 5px dotted blue;
+}
+
+.header a {
+  display: block;
+  padding: 20px 20px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 900px;
+  border-left: 2px solid hotpink;
+  border-right: 2px solid hotpink;
+}
+
+.header-logo {
+  border-right: 5px dotted peru;
+  font font-weight: 400;
+}
