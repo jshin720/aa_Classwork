@@ -13,34 +13,42 @@
 
   > ul {
     display: flex;
-    // flex-direction: row;
-    // justify-content: space-between;
     align-items: center;
+    
     > li {
-
+      font-family: $sans-serif;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin: 5px;
     }
   }
 
   span {
-
+    &:hover {
+      color: $lightest-gray;
+    }
   }
 }
 
 .right-nav  {
 
   > ul {
-
+    display: flex;
+    align-items: center;
     > li {
-  
+      font-family: $sans-serif;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin: 5px;
     }
 
     > li:last-of-type {
-  
+      
     }
   }
   
   i {
-
+    font-size: 25px;
   }
 }
 
