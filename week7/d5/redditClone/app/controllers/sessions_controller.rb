@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+
+  before_action :require_logged_in, only: [:destroy]
+
   def create
     @user = User.find_by_credentials(params[:user][:name], params[:user][:password])
     if @user
@@ -16,6 +19,6 @@ class SessionsController < ApplicationController
 
   def destroy
     logout!
-    redirect_to session_url
+    redirect_to new_session_url 
   end
 end

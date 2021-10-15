@@ -16,8 +16,8 @@ class User < ApplicationRecord
   validates :password_digest, presence: true
   validates :password, length: {minimum: 6}, allow_nil: true
 
-  def self.find_by_credentials(username, password)
-    user = User.find_by(username: username)
+  def self.find_by_credentials(name, password)
+    user = User.find_by(name: name)
     return nil if user.nil?
     user.is_valid_password?(password) ? user : nil
   end
@@ -40,5 +40,5 @@ class User < ApplicationRecord
   def ensure_token
     self.session_token ||= SecureRandom::urlsafe_base64
   end
-
+  
 end

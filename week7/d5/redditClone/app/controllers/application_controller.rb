@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+ 
+ 
+ 
   #crlll
   helper_method :current_user, :logged_in? 
 
