@@ -24,7 +24,7 @@ class User < ApplicationRecord
   
   def password=(password)
     @password = password
-    self.password_digest = BCrypt::Password.new(password)
+    self.password_digest = BCrypt::Password.create(password)
   end
 
   def is_valid_password?(password)
@@ -33,6 +33,8 @@ class User < ApplicationRecord
 
   def reset_session_token!
     self.session_token = SecureRandom::urlsafe_base64
+    self.save!
+    self.session_token
   end
 
   def ensure_token
