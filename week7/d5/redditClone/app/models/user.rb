@@ -16,6 +16,11 @@ class User < ApplicationRecord
   validates :password_digest, presence: true
   validates :password, length: {minimum: 6}, allow_nil: true
 
+  has_many :subs,
+    primary_key: :id,
+    foreign_key: :moderator_id,
+    class_name: :Sub
+
   def self.find_by_credentials(name, password)
     user = User.find_by(name: name)
     return nil if user.nil?
