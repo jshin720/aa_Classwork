@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       login!(@user)
       redirect_to users_url
     else
+      flash.now[:errors] = @user.errors.full_messages
       render :new
     end
   end
@@ -19,6 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     logout!
+    flash[:messages] = ["Successfully logged out!"]
     redirect_to new_session_url 
   end
 end

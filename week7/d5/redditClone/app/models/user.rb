@@ -21,6 +21,11 @@ class User < ApplicationRecord
     foreign_key: :moderator_id,
     class_name: :Sub
 
+  has_many :posts,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Post
+
   def self.find_by_credentials(name, password)
     user = User.find_by(name: name)
     return nil if user.nil?
