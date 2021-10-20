@@ -70,9 +70,9 @@ function transpose(arr) {
     for (let j = 1; j < subArr.length; j++) {
       newSubArr.push(arr[j][i])
     }
-    transposed.push(newSubArr)
+    transposed.push(newSubArr);
   }
-  return transposed
+  return transposed;
 }
 
 
