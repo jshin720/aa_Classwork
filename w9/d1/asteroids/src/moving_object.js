@@ -16,9 +16,10 @@ MovingObject.prototype.draw = function (ctx) {
 }
 
 MovingObject.prototype.move = function () {
+  // ctx.clearRect(0, 0, 640, 480);
   this.pos[0] += this.vel[0];
   this.pos[1] += this.vel[1];
-  this.draw(ctx);
+  // this.draw(ctx);
 }
 
 

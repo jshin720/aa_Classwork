@@ -7,7 +7,7 @@ const RADIUS = 10;
 Util.inherits(Asteroid, MovingObject)
 
 function Asteroid({pos}) {
-  let rv = Util.randomVec(5);
+  let rv = Util.randomVec(1);
   MovingObject.call(this, { pos, vel: rv, radius: RADIUS, color: COLOR });
 
   // 
