@@ -3,6 +3,8 @@ console.log("Webpack is working!");
 // index.js
 const MovingObject = require("./moving_object.js");
 window.MovingObject = MovingObject;
+const Asteroid = require("./asteroid.js");
+window.Asteroid = Asteroid;
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,4 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   window.mo = mo;
   mo.draw(ctx);
+
+  const ast = new Asteroid({pos:[100, 100] }); 
+  window.ast = ast;
+  ast.draw(ctx);
 });
