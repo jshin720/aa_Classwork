@@ -6,10 +6,11 @@ class Game extends React.Component{
   constructor(props){
     super(props);
     //Grid size and numBombs are required args
-    let board = new Board();
+    let board = new Board(9, 3);
     this.state = {
       board: board
     }
+    this.updateGame = this.updateGame.bind(this);
   }
 
   //how will we get user input
@@ -24,8 +25,9 @@ class Game extends React.Component{
 //
   render(){
     return (<div> 
-      <a>{board = {this.state.board}} </a>
-      <a>{this.updateGame = {this.state.}}</a>
+    <Board board={this.state.board} updateGame={this.updateGame}/>
     </div>)
   }
 }
+
+export default Game;
