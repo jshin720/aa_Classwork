@@ -6,7 +6,7 @@ class Game extends React.Component {
   constructor(props){
     super(props);
     //Grid size and numBombs are required args
-    let board = new Minesweeper.Board(9, 3);
+    let board = new Minesweeper.Board(9, 9);
     this.state = {
       board: board
     }

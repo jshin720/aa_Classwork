@@ -1,5 +1,6 @@
 import React from 'react'
 import * as Minesweeper from './minesweeper'
+import Tile from './tile'
 
 class Board extends React.Component{
   constructor(props){
@@ -8,18 +9,19 @@ class Board extends React.Component{
   }
   render(){
     let board = this.props.board; 
-    this.props.updateGame
-    let boardGrid = board.grid.map((el, i) => {
-      let row = el.map((tile, j) => {
+    // this.props.updateGame
+    const boardGrid = board.grid.map((row, i) => {
+      return (row.map((tile, j) => {
+        // console.log(tile);
         //TODO: define Tile component 
-        <Tile tile={new Minesweeper.Tile(this.props.board, [i,j])} updateGame={this.props.updateGame} key={i,j}/>
-      });
-      <div key={i}>
-        {row}
-      </div>
+        
+        return (<Tile tile={tile} updateGame={this.props.updateGame} key={`tile-${j}`}/> )
+        
+      }).unshift(<div className={i}>).concat(<div/>)
+      )
     });
 
-
+    // console.log(this.boardGrid)
     return (<div> 
       {boardGrid}
     </div>)

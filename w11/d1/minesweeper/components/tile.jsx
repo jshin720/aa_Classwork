@@ -18,17 +18,18 @@ class Tile extends React.Component{
 
   render(){
     let tile = this.props.tile;
+    let content; 
     if (tile.bombed){
-      //Game over 
+      content = '\u1F4A3'
     } else if (tile.flagged){
-      //Render a flag 
+      content = '\u2690'
     } else if (tile.adjacentBombCount() > 0){
-      //Render a number for count 
+      content = tile.adjacentBombCount(); 
     } else {
-      //Render an empty square 
+      content = ' ';
     }
-    return (<div className="Tile" onClick={this.handleClick}>
-      
+    return (<div className="Tile" onClick={this.handleClick} flagged={tile.flagged.toString()} bombed={tile.bombed.toString()} revealed={tile.explored.toString()}>
+      {content}
     </div>);
   }
 
