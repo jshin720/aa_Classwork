@@ -4,4 +4,4 @@ import ReactDOM from 'react-dom'
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Game/>, document.getElementById('root'))
-})
+});

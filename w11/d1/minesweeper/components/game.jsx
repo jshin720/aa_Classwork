@@ -1,12 +1,12 @@
-import Board from './board'
-import Tile from './tile'
+import * as Minesweeper from './minesweeper'
 import React from 'react'
+import Board from './board'
 
-class Game extends React.Component{
+class Game extends React.Component {
   constructor(props){
     super(props);
     //Grid size and numBombs are required args
-    let board = new Board(9, 3);
+    let board = new Minesweeper.Board(9, 3);
     this.state = {
       board: board
     }
